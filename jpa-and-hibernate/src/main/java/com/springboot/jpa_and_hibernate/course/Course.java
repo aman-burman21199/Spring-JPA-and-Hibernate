@@ -1,8 +1,19 @@
 package com.springboot.jpa_and_hibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+// Create mapping between Bean and table in db using @Entity.
+@Entity
+// @Entity(name="TABLE_NAME")
 public class Course {
+	@Id
 	private long id;
-	private String name,author;
+//	@Column(name="name")	// As same name of column
+	private String name;
+//	@Column(name="author")
+	private String author;
 	public Course() {
 		
 	}
